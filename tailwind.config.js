@@ -3,6 +3,7 @@ export default {
   content: ["./*.{html,js,}"],
   theme: {
     extend: {
+      
       animation: {
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
     },
@@ -11,9 +12,14 @@ export default {
             from: { transform: 'translateX(0)' },
             to: { transform: 'translateX(-100%)' },
         }
+    },
+    dropShadow: {
+      'shadow': '0 0 1em #f0db4f',
     }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animated')
+  ],
 }
 
